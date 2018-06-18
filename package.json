@@ -2,20 +2,16 @@
   "name": "Alphat",
   "version": "9.9.9",
   "description": "LINE",
-  "main": "./src/main.js",
+  "main": "./src/main.js1",
   "scripts": {
-    "start": "npm run nadya1 && npm run nadya2 && npm run nadya3 && npm run nadya4 && npm run nadya5",
-    "nadya1": "node ./src/bot1.js",
-    "nadya2": "node ./src/bot2.js",
-    "nadya3": "node ./src/bot3.js",
-    "nadya4": "node ./src/bot4.js",
-    "nadya5": "node ./src/bot5.js"
+    "start": "npm run wN",
+    "wN": "node ./src/bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nadyatjia/Alphat"
+    "url": "https://github.com/indah45/ALPjs-Evolution"
   },
-  "author": "Nadya <Nadya.goodgirl@gmail.com>",
+  "author": "wN <indah45@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "qrcode-terminal": "^0.11.0",
@@ -33,9 +29,9 @@
     "moment": "^2.18.1"
   },
   "bugs": {
-    "url": "https://github.com/Nadyatjia/Alphat/issues"
+    "url": "https://github.com/indah45/ALPjs-Evolution/issues"
   },
-  "homepage": "https://github.com/Nadyatjia/Alphat#README",
+  "homepage": "https://github.com/indah45/ALPjs-Evolution#README",
   "keywords": [
     "line"
   ]
