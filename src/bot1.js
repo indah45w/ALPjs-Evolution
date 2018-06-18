@@ -3,7 +3,7 @@ const LINE = require('./main.js');
 console.info("\n\
 =========================================\n\
 BotName: LINE Alphat JS\n\
-Version: ALPjs-Evolution\n\
+Version: ALPjs-Evolution  By:wN\n\
 Thanks to @Alfathdirk @TCR_TEAM @NadyaTJ DLL\n\
 =========================================\n\
 \nNOTE : This bot is made by @Alfathdirk @TCR_TEAM !");
