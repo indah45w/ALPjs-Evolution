@@ -57,7 +57,12 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-    options.headers['X-Line-Application'] = 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0';
+//    options.headers['X-Line-Application'] = 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0';
+//      options.headers['X-Line-Application'] = 'CHROMEOS\t2.1.0\tChrome_OS\t1';  
+    options.headers['X-Line-Application'] = 'DESKTOPMAC 10.10.2-YOSEMITE-x64    MAC 4.5.0';
+//    options.headers['X-Line-Application'] = 'DESKTOPMAC\t5.3.3-YOSEMITE-x64\tMAC\t10.12.0';
+//    options.headers['X-Line-Application'] = 'DESKTOPWIN\t5.1.2\tMFR-BOT\t5.1.2600-MFRLORDBOT-x64';
+//    options.headers['X-Line-Application'] = 'WIN10\t5.1.2\tMFR-BOT\t5.1.2600-MFRLORDBOT-x64';  
     this.options = options;
     this.connection =
       thrift.createHttpConnection(this.config.LINE_DOMAIN_3RD, 443, this.options);
@@ -100,7 +105,7 @@ class LineAPI {
   _qrCodeLogin() {
     this.setTHttpClient();
     return new Promise((resolve, reject) => {
-    this._client.getAuthQrcode(true, 'Nadya',(err, result) => {
+    this._client.getAuthQrcode(true, 'wN',(err, result) => {
       const qrcodeUrl = `line://au/q/${result.verifier}`;
       qrcode.generate(qrcodeUrl,{small: true});
       console.info(`\n\nlink qr code is: ${qrcodeUrl}`)
@@ -121,7 +126,7 @@ class LineAPI {
                 this.options.headers['X-Line-Access'] = config.tokenn;
                 this.options.path = this.config.LINE_COMMAND_PATH;
                 this.setTHttpClient(this.options);
-			    this.options.headers['User-Agent'] = 'Line/6.0.0 iPad4,1 9.0.2';
+			    this.options.headers['User-Agent'] = 'Line/7.18.1';
 			    this.axz = true;
 			    this.setTHttpClient(this.options);
 			    this.axz = false;
@@ -147,7 +152,7 @@ class LineAPI {
 				 reqx.password = rsaCrypto.credentials;
 				 reqx.keepLoggedIn = true;
 				 reqx.accessLocation = this.config.ip;
-				 reqx.systemName = 'LineAlphatFork-PC';
+				 reqx.systemName = 'HammyBot-PC';
 				 reqx.e2eeVersion = 0;
 				 try{
 					 this._client.loginZ(reqx,
