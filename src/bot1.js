@@ -3,15 +3,14 @@ const LINE = require('./main.js');
 console.info("\n\
 =========================================\n\
 BotName: LINE Alphat JS\n\
-Version: TJ VERSION\n\
-Thanks to @Alfathdirk @TCR_TEAM\n\
+Version: ALPjs-Evolution\n\
+Thanks to @Alfathdirk @TCR_TEAM @NadyaTJ DLL\n\
 =========================================\n\
 \nNOTE : This bot is made by @Alfathdirk @TCR_TEAM !");
 
 /*
 | This constant is for auth/login
-| 
-| Change it to your authToken / your email & password
+| Change it to your authToken or your email & password
 */
 const auth = {
 	authToken: '',
@@ -36,6 +35,5 @@ client.startx().then(async (res) => {
 				LINE.poll(ops[op])
 			}
 		}
-		//LINE.aLike() //AutoLike (CAUSE LAG)
 	}
 });
