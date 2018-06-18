@@ -1,16 +1,28 @@
 const LineConnect = require('./connect');
-let line = require('./main.js');
-let LINE = new line();
+const LINE = require('./main.js');
+console.info("\n\
+=========================================\n\
+BotName: LINE Alphat JS\n\
+Version: ALPjs-Evolution By:wN\n\
+Thanks to @Alfathdirk @NadyaTJ @TCR_TEAM @gogglex @etotJS DLL\n\
+=========================================\n\
+\nNOTE : This bot is made by @Alfathdirk  @TCR_TEAM !");
 
+/*
+| This constant is for auth/login
+| Change it to your authToken or your email & password
+*/
 const auth = {
-  authToken: 'HERE',
-  certificate: 'HERE'
+	authToken: '',
+	certificate: '',
+	email: '',
+	password: ''
 }
+
+let client =  new LineConnect();
 //let client =  new LineConnect(auth);
-   let client =  new LineConnect();
 
 client.startx().then(async (res) => {
-	
 	while(true) {
 		try {
 			ops = await client.fetchOps(res.operation.revision);
