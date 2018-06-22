@@ -12,7 +12,7 @@ ALPjsEvolution (Credit By:@wN)
 -Fungsi Berbeda 1 sama lain (Tergantung Kebutuhan)
 -Cara menggunakan Edit di BotJs (sesuaikan dengan bot yg ingin digunakan)contoh ada d botjs👈
 ---------------
-Suport LA : *DESKTOPMAC*IOSIPAD*WIN10*DESKTOPWIN*CHROMEOS (cek di api & config)
+Suport LA : #DESKTOPMAC #IOSIPAD #WIN10 #DESKTOPWIN #CHROMEOS (cek di api & config)
 
 CARA INSTALL SAMA SEPERTI ALPHATjs LAINYA
 ---------------
