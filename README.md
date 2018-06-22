@@ -1,39 +1,26 @@
-# AlphatTJ
-Bot AlphatTJ@9.9.9 (Masih Error, Tapi Bisa Buat Ambil Token Buat TCR Sebelah)
-------
--
+ALPjsEvolution (Credit By:@wN)
+--------
+Login QR + 5 Fungsi Terpisah
+#👉TokenJs
+#👉kickJs
+#👉spamJs
+#👉ProJs
+#👉New-generation
+Fungsi Berbeda 1 sama lain (Tergantung Kebutuhan)
+Cara menggunakan Edit di BotJs (sesuaikan dengan bot yg ingin digunakan)contoh ada d botjs👈
+---------------
+Suport LA : *DESKTOPMAC*IOSIPAD*WIN10*DESKTOPWIN*CHROMEOS (cek di api & config)
 
-NEW
-------
-- `Mute`
-- `Unmute`
-- `Add Staff`
-- `Delete Staff`
+CARA INSTALL SAMA SEPERTI ALPHATjs LAINYA
+---------------
 
-Cara Install Bot AlphatJS :
-------
-- `pkg install nodejs -y`
-- `pkg install git -y`
-- `git clone https://github.com/Nadyatjia/AlphatOld`
-- `pkg install nano`
-- `cd AlphatOld`
-- `npm install`
-- `npm start`
+Thx to :
+@Alfadirk
+@Tim TCR
+@NadyaTJ
+@Googlex
+@EtotJs
+DLL
 
-Cara Menjalankan Bot Kembali :
-------
-- `cd AlphatOld`
-- `npm start`
-
-Credit By@ Nadya Sutjiadi.
-------
-- `Follow My Instagram : nadya.tjia`
-- `Add My ID LINE : nad_nad. (pake titik)`
-
-Thx To :
-------
-- `Alfatdirk`
-
-
-
+NB:GUNAKAN DENGAN BIJAK,, & TIDAK DI PERJUAL BELIKAN..!
 
