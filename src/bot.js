@@ -1,5 +1,5 @@
 const LineConnect = require('./connect');
-const LINE = require('./main.js');
+const LINE = require('./token.js'); // ganti token.js/main.js sesuai nama bot yg ingin di gunakan
 console.info("\n\
 =========================================\n\
 BotName: LINE Alphat JS\n\
