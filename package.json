@@ -2,7 +2,7 @@
   "name": "Alphat",
   "version": "9.9.9",
   "description": "LINE",
-  "main": "./src/main.js",
+  "main": "./src/token.js",
   "scripts": {
     "start": "npm run wN",
     "wN": "node ./src/bot.js"
