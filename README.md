@@ -6,6 +6,7 @@ Login QR + 5 Fungsi Terpisah
 #👉spamJs
 #👉ProJs
 #👉New-generation
+---------
 Fungsi Berbeda 1 sama lain (Tergantung Kebutuhan)
 Cara menggunakan Edit di BotJs (sesuaikan dengan bot yg ingin digunakan)contoh ada d botjs👈
 ---------------
