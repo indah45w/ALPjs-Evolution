@@ -57,9 +57,10 @@ class LineAPI {
     path: this.config.LINE_HTTP_URL,
     https: true
   }) {
-//    options.headers['X-Line-Application'] = 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0';
-//      options.headers['X-Line-Application'] = 'CHROMEOS\t2.1.0\tChrome_OS\t1';  
-    options.headers['X-Line-Application'] = 'DESKTOPMAC 10.10.2-YOSEMITE-x64    MAC 4.5.0';
+ //   options.headers['X-Line-Application'] = 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0';
+  //    options.headers['X-Line-Application'] = 'CHROMEOS\x091.4.13\x09Chrome_OS\x091';
+      options.headers['X-Line-Application'] = 'CHROMEOS\t2.1.0\tChrome_OS\t1';  
+//    options.headers['X-Line-Application'] = 'DESKTOPMAC 10.10.2-YOSEMITE-x64    MAC 4.5.0';
 //    options.headers['X-Line-Application'] = 'DESKTOPMAC\t5.3.3-YOSEMITE-x64\tMAC\t10.12.0';
 //    options.headers['X-Line-Application'] = 'DESKTOPWIN\t5.1.2\tMFR-BOT\t5.1.2600-MFRLORDBOT-x64';
 //    options.headers['X-Line-Application'] = 'WIN10\t5.1.2\tMFR-BOT\t5.1.2600-MFRLORDBOT-x64';  
@@ -105,12 +106,12 @@ class LineAPI {
   _qrCodeLogin() {
     this.setTHttpClient();
     return new Promise((resolve, reject) => {
-    this._client.getAuthQrcode(true, 'wN',(err, result) => {
+    this._client.getAuthQrcode(true, 'Hammy-PC',(err, result) => {
       const qrcodeUrl = `line://au/q/${result.verifier}`;
       qrcode.generate(qrcodeUrl,{small: true});
       console.info(`\n\nlink qr code is: ${qrcodeUrl}`)
       Object.assign(this.config.Headers,{ 'X-Line-Access': result.verifier });
-        unirest.get('https://gd2.line.naver.jp/Q')
+        unirest.get('https://gf.line.naver.jp/Q')
           .headers(this.config.Headers)
           .timeout(120000)
           .end(async (res) => {
@@ -126,7 +127,7 @@ class LineAPI {
                 this.options.headers['X-Line-Access'] = config.tokenn;
                 this.options.path = this.config.LINE_COMMAND_PATH;
                 this.setTHttpClient(this.options);
-			    this.options.headers['User-Agent'] = 'Line/7.18.1';
+			    this.options.headers['User-Agent'] = 'Line/8.8.0';
 			    this.axz = true;
 			    this.setTHttpClient(this.options);
 			    this.axz = false;
@@ -152,7 +153,7 @@ class LineAPI {
 				 reqx.password = rsaCrypto.credentials;
 				 reqx.keepLoggedIn = true;
 				 reqx.accessLocation = this.config.ip;
-				 reqx.systemName = 'HammyBot-PC';
+				 reqx.systemName = 'Hammy-PC';
 				 reqx.e2eeVersion = 0;
 				 try{
 					 this._client.loginZ(reqx,
@@ -247,8 +248,27 @@ class LineAPI {
     return await this._client.getGroupIdsInvited()
   }
 
+  async _findGroupByName(name) {
+    let group = [];
+    let groupID = await this._getGroupsJoined();
+    let groups = await this._getGroups(groupID);
+    for (let key in groups) {
+        if(groups[key].name === name){
+          group.push(groups[key].id);
+        }
+    }
+    return group;
+
+  }
+
   async _acceptGroupInvitation(groupid) {
     this._client.acceptGroupInvitation(0,groupid);
+    await this._getGroupsInvited();
+    await this._getGroupsJoined();
+    return;
+  }
+  
+  async _refrehGroup() {
     await this._getGroupsInvited();
     await this._getGroupsJoined();
     return;
@@ -264,6 +284,10 @@ class LineAPI {
 
   async _updateGroup(group) {
     return await this._client.updateGroup(0, group)
+  }
+
+  async _updateProfile(profile) {
+    return await this._client.updateProfile(0, profile)
   }
 
   _getContacts(mid) {
@@ -300,6 +324,19 @@ class LineAPI {
   
   async _acceptGroupInvitationByTicket(gid,ticketID){
     return await this._client.acceptGroupInvitationByTicket(0,gid,ticketID);
+  }
+  
+    _rejectGroupInvitation(groupIds) {
+    return this._client.rejectGroupInvitation(0,groupIds);
+  }
+  
+  async _createRoom(memberids) {
+    return await this._client.createRoom(0,[memberids]);
+  }
+
+  async _createGroup(groupName,members) {
+    await this._getAllContactIds();
+    return this._client.createGroup(0,groupName,members);
   }
   
   async _dlImg(uri, filenames, callback){
