@@ -37,11 +37,11 @@ const config = {
   LINE_POST_CONTENT_URL: 'https://os.line.naver.jp/talk/m/upload.nhn',
   LINE_POST_CONTENT_URL_2ND: 'https://obs-sg.line-apps.com/talk/m/upload.nhn',
  // X_LINE_APP: 'IOSIPAD\x097.14.0\x09iPhone_OS\x0910.12.0',
-  X_LINE_APP: 'DESKTOPMAC 10.10.2-YOSEMITE-x64 MAC 4.5.0',
+ // X_LINE_APP: 'DESKTOPMAC 10.10.2-YOSEMITE-x64 MAC 4.5.0',
  // X_LINE_APP: 'DESKTOPMAC\t5.3.3-YOSEMITE-x64\tMAC\t10.12.0',
  // X_LINE_APP: 'DESKTOPWIN\t5.1.2\tMFR-BOT\t5.1.2600-MFRLORDBOT-x64',
  // X_LINE_APP: 'WIN10\t5.1.2\tMFR-BOT\t5.1.2600-MFRLORDBOT-x64',
- // X_LINE_APP: 'CHROMEOS	1.4.13	Chrome_OS	1',
+  X_LINE_APP: 'CHROMEOS	1.4.13	Chrome_OS	1',
   ip: '127.0.0.1',
   version: '0.0.2',
   revision: 0,
@@ -49,7 +49,7 @@ const config = {
   platform: whichPlatform,
   EMAIL_REGEX: /[^@]+@[^@]+\.[^@]+/,
   Headers: {
-    'User-Agent':'Line/7.14.0'
+    'User-Agent':'Line/8.8.0'
   },
   FILE_DOWNLOAD_LOCATION: '/../download/',
   YT_DL: 'http://www.saveitoffline.com/process/',
