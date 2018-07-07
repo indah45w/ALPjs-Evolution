@@ -47,7 +47,7 @@ class LineConnect extends LineAPI {
 		    this._tokenLogin(this.authToken, this.certificate);
 		    this._chanConn();
 		    this._channel.issueChannelToken("1341209950",(err, result)=>{
-				config.chanToken = result.channelAccessToken;
+//				config.chanToken = result.channelAccessToken;
 				this._client.getLastOpRevision((err,result)=>{
 					let xrx = result.toString().split(" ");
 					this.revision = xrx[0].toString() - 1;
